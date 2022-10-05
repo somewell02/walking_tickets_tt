@@ -1,4 +1,4 @@
-# welbex_test_task
+# Welbex test task
 
 ## Project setup
 ```

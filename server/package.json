@@ -1,0 +1,14 @@
+{
+  "name": "welbex_test_task",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "author": "Somewell",
+  "license": "ISC",
+  "dependencies": {
+    "promise-mysql": "^5.2.0"
+  }
+}

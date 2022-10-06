@@ -29,7 +29,6 @@ input {
     height: 40px;
     background: transparent;
     outline: none;
-    border-radius: 3px;
     font-size: 14px;
     color: var(--text-color);
     border: 1px solid var(--input-color);

@@ -126,7 +126,6 @@ export default {
         left: 0;
         background: var(--background-color);
         border: 1px solid var(--border-color);
-        border-radius: 5px;
         max-height: 200px;
         min-width: 100%;
         z-index: 10;
@@ -144,12 +143,6 @@ export default {
             background: none;
             &:not(:first-child) {
                 border-width: 1px 0 0 0;
-            }
-            &:first-child {
-                border-radius: 5px 5px 0 0;
-            }
-            &:last-child {
-                border-radius: 0 0 5px 5px;
             }
             &:hover,
             &.active {

@@ -17,7 +17,6 @@ button {
     height: 40px;
     font-size: 14px;
     margin: 0;
-    border-radius: 5px;
     min-width: 120px;
     color: var(--text-color);
     border: 1px solid var(--border-color);

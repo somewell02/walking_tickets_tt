@@ -166,14 +166,12 @@ export default {
         .filters_icon {
             height: 40px;
             padding: 12px 20px;
-            border-radius: 5px;
             border: solid 1px var(--border-color);
             @include flex-center;
         }
 
         .clear_btn {
             @include flex-center;
-            border-radius: 5px;
 
             &:hover {
                 background: none;

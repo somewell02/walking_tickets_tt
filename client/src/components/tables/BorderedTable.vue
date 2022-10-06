@@ -70,7 +70,6 @@ export default {
         display: flex;
         padding: 12px 20px;
         min-height: 40px;
-        border-radius: 5px;
         border: 1px solid var(--border-color);
 
         @include media-md {
@@ -96,6 +95,7 @@ export default {
             .content {
                 display: flex;
                 align-items: center;
+                color: var(--text-color);
 
                 @include media-md {
                     align-items: flex-start;

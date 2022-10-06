@@ -71,6 +71,7 @@ export default {
 <style lang="scss" scoped>
 .pagination {
     display: flex;
+    color: var(--text-color);
     .pagination_item {
         @include flex-center;
         cursor: pointer;
@@ -80,7 +81,6 @@ export default {
         min-width: 28px;
         height: 28px;
         padding: 7px;
-        border-radius: 5px;
         border: none;
         background: none;
         &.prev,

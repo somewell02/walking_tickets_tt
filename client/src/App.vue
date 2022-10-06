@@ -1,6 +1,8 @@
 <template>
-    <div class="app container">
-        <home-view />
+    <div class="app">
+        <div class="container">
+            <home-view />
+        </div>
     </div>
 </template>
 
@@ -15,7 +17,9 @@ export default {
 
 <style lang="scss" scoped>
 .app {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 100vh;
+    background: var(--background-color);
 }
 </style>

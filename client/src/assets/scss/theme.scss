@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #121212;
+  --primary-color: #007bff;
   --secondary-color: #C7C7C7;
   --border-color: #ECECEC;
   --input-color: #ECECEC;
-  --text-color: #404040;
-  --background-color: #ffffff;
-  --hover-color: #F9F9F9;
+  --text-color: #ffffff;
+  --background-color: #121212;
+  --hover-color: #2f2f2f;
 }
 
 html {
@@ -21,7 +21,9 @@ textarea {
 h1 {
   font-size: 28px;
   font-weight: 400;
+  line-height: 1.5;
   text-align: center;
+  color: var(--text-color);
 }
 
 .container {

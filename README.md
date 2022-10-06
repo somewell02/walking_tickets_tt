@@ -1,6 +1,6 @@
 # Welbex test task
 
-## Project setup
+## Client part setup
 ```
 npm install
 ```
@@ -20,5 +20,15 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Server part setup
+
+Create a database and import the file server/welbex_test_task_db.sql
+
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm start
+```

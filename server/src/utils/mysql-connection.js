@@ -5,7 +5,7 @@ class MysqlConnection {
         host: "localhost",
         user: "root",
         password: "12345678",
-        database: "welbex_test_task"
+        database: "walking_tickets_tt"
     }
 
     static getConnection = () => {

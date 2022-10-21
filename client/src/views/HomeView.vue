@@ -33,7 +33,13 @@
                 />
             </div>
         </div>
-        <bordered-table :titles="TICKETS_TABLE" :rows="finalTickets" class="tickets_table"/>
+        <bordered-table
+            v-if="finalTicketsLength"
+            :titles="TICKETS_TABLE"
+            :rows="finalTickets"
+            @delete="deleteTicketFromDb"
+            class="tickets_table"
+        />
         <div class="pagination_wrap">
             <div class="count_title">
                 Найдено {{ finalTicketsLength }} билетов
@@ -55,7 +61,7 @@ import BorderedButton from "@/components/buttons/BorderedButton";
 import FilledPagination from "@/components/paginations/FilledPagination";
 
 import {computed, onMounted, reactive, ref} from "vue";
-import {getTickets} from "@/data/tickets/ticket-api";
+import {deleteTicket, getTickets} from "@/data/tickets/ticket-api";
 import {useList} from "@/use/list";
 import {TICKETS_TABLE, TICKETS_SORT, TICKETS_FILTER, TICKETS_PAGINATION} from "@/data/tickets/ticket-options";
 
@@ -99,6 +105,12 @@ export default {
             return ticket;
         }))
 
+        const deleteTicketFromDb = async id => {
+            deleteTicket(id).then(() => {
+                tickets.value = tickets.value.filter(ticket => ticket.id !== id);
+            });
+        }
+
         const {
             finalItems: finalTickets,
             length: finalTicketsLength,
@@ -120,6 +132,7 @@ export default {
             sortValue,
             filterValue,
             clearFilters,
+            deleteTicketFromDb,
             page,
             finalTicketsLength,
             paginationLength,

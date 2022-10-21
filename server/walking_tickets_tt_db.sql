@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `welbex_test_task` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `welbex_test_task`;
+CREATE DATABASE  IF NOT EXISTS `walking_tickets_tt` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `walking_tickets_tt`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
--- Host: localhost    Database: welbex_test_task
+-- Host: localhost    Database: walking_tickets_tt
 -- ------------------------------------------------------
 -- Server version	8.0.22
 

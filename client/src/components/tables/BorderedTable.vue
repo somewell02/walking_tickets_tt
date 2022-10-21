@@ -10,6 +10,7 @@
             >
                 {{ title.name }}
             </div>
+            <div class="actions"></div>
         </div>
         <div class="rows">
             <div
@@ -31,14 +32,19 @@
                         {{ row[title.id] || "-" }}
                     </div>
                 </div>
+                <div class="actions">
+                    <delete-icon class="action_btn" @click="deleteTicket(row.id)" />
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import DeleteIcon from "@/assets/img/icons/DeleteIcon";
 export default {
     name: "BorderedTable",
+    components: {DeleteIcon},
     props: {
         titles: {
             type: Array,
@@ -49,6 +55,19 @@ export default {
             required: true,
         },
     },
+    emits: {
+        delete: null,
+    },
+
+    setup(_, {emit}) {
+        const deleteTicket = id => {
+            emit("delete", id);
+        }
+
+        return {
+            deleteTicket
+        }
+    }
 };
 </script>
 
@@ -56,6 +75,11 @@ export default {
 .bordered_table {
     font-size: 14px;
     font-weight: 400;
+
+    .titles .actions,
+    .row .actions {
+        width: 5%;
+    }
 
     .titles {
         color: var(--secondary-color);
@@ -78,6 +102,15 @@ export default {
 
         &:not(:last-child) {
             margin-bottom: 12px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+
+            .action_btn {
+                cursor: pointer;
+            }
         }
 
         .column {

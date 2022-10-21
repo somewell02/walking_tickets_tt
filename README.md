@@ -1,4 +1,4 @@
-# Welbex test task
+# Walking tickets
 
 ## Client part setup
 ```
@@ -22,7 +22,7 @@ npm run lint
 
 ## Server part setup
 
-Create a database and import the file server/welbex_test_task_db.sql
+Create a database and import the file server/walking_tickets_tt_db.sql
 
 ```
 npm install
